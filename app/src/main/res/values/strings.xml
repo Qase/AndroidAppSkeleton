@@ -10,6 +10,7 @@
     <string name="menu_item_2_2">Submenu Item 2</string>
     <string name="menu_item_3">Menu Item 3</string>
     <string name="menu_item_4">Test MVVM</string>
+    <string name="menu_item_5">Test Dagger</string>
     <string name="menu_item_preferences">Preferences</string>
 
     <string name="menu_context_item_1">Context Item 1</string>
@@ -24,6 +25,14 @@
     <string name="title_fragment_1">Test Fragment 1</string>
     <string name="title_fragment_2">Test Fragment 2</string>
     <string name="title_fragment_3">Test Fragment 3</string>
+    <string name="title_fragment_view_model">Test Fragment ViewModel</string>
+    <string name="title_fragment_dagger">Test Fragment Dagger</string>
     <string name="ok">Ok</string>
     <string name="cancel">Cancel</string>
+    <string name="description_nested">This fragment shows how we can nest fragments using FragmentManager</string>
+    <string name="description_simple">This fragment demonstrates how we can use FragmentManager to show single simple fragment</string>
+    <string name="description_using_data">In this fragment we use data bundle provided in BaseFragment to keep fragment state</string>
+    <string name="description_using_viewmodel">This fragments shows how to use architecture components viewmodel</string>
+    <string name="description_using_dagger">This fragments shows how to use dependency injection with dagger</string>
+    <string name="data">Data:</string>
 </resources>

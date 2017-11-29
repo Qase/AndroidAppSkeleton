@@ -4,7 +4,6 @@ import android.content.Context
 import android.support.multidex.MultiDex
 import android.support.multidex.MultiDexApplication
 import android.util.Log
-import com.qase.android.appskeleton.dagger.BaseAppComponent
 import com.qase.android.appskeleton.fragment.BaseFragmentManager
 import com.qase.android.appskeleton.preference.BasePreferences
 
@@ -15,8 +14,6 @@ open class BaseApp : MultiDexApplication() {
         val instance: BaseApp
             get() = _instance ?: throw RuntimeException("App instance terminated or not yet created")
     }
-
-    lateinit var component: BaseAppComponent
 
     var baseActivity: BaseMainActivity? = null
 

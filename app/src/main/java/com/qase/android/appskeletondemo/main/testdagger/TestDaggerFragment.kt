@@ -10,17 +10,16 @@ import com.qase.android.appskeleton.fragment.BaseViewModelFragment
 import com.qase.android.appskeletondemo.R
 import kotlinx.android.synthetic.main.fragment_view_model.*
 
-class TestvmFragment : BaseViewModelFragment<BaseBundle, TestvmViewModel>(TestvmViewModel::class.java) {
+class TestDaggerFragment : BaseViewModelFragment<BaseBundle, TestDaggerViewModel>(TestDaggerViewModel::class.java) {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        return inflater?.inflate(R.layout.fragment_view_model, container, false)
+        return inflater?.inflate(R.layout.fragment_dagger, container, false)
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        getDataButton.setOnClickListener{ viewModel.onGetDataClicked() }
         viewModel.testLiveData.observe(this, Observer {
             textData.text = it?.toString()
         })

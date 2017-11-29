@@ -14,7 +14,7 @@ import com.qase.android.appskeleton.BaseApp
 abstract class BaseFragment<BundleType : BaseBundle> : Fragment(), IFragment<BundleType> {
 
     override var data: BundleType? = null
-    protected var mActualFragment = ""
+    protected var mActualFragment = "BaseFragment"
     protected var showLifecycleLog = true
 
     override fun onBackPressed(): Boolean = false

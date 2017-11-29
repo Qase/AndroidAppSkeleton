@@ -13,7 +13,7 @@ import com.qase.android.appskeletondemo.main.preference.SettingsFragment
 import com.qase.android.appskeletondemo.main.test.TestFragment
 import com.qase.android.appskeletondemo.main.test.TestFragment2
 import com.qase.android.appskeletondemo.main.test.TestFragment3
-import com.qase.android.appskeletondemo.main.testviewmodel.TestvmBundle
+import com.qase.android.appskeletondemo.main.testviewmodel.TestDaggerFragment
 import com.qase.android.appskeletondemo.main.testviewmodel.TestvmFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_layout.*
@@ -84,16 +84,13 @@ class MainActivity : BaseMainActivity(), NavigationView.OnNavigationItemSelected
         // Handle navigation view item clicks here.
         val id = item.itemId
 
-        if (id == R.id.menu_item_1) {
-            App.instance.fragmentManager.changeFragment(TestFragment::class.java, TestFragment::class.java.getSimpleName())
-        } else if (id == R.id.menu_item_2) {
-            App.instance.fragmentManager.changeFragment(TestFragment2::class.java, TestFragment2::class.java.getSimpleName())
-        } else if (id == R.id.menu_item_3) {
-            App.instance.fragmentManager.changeFragment(TestFragment3::class.java, TestFragment3::class.java.getSimpleName())
-        } else if (id == R.id.menu_item_4) {
-            App.instance.fragmentManager.changeFragment<TestvmFragment, TestvmBundle>(TestvmFragment::class.java, TestvmFragment::class.java.getSimpleName())
-        } else if (id == R.id.menu_item_preferences) {
-            App.instance.fragmentManager.changeFragment(SettingsFragment::class.java, SettingsFragment::class.java.getSimpleName())
+        when (id) {
+            R.id.menu_item_1 -> App.instance.fragmentManager.changeFragment(TestFragment::class.java, TestFragment::class.java.getSimpleName())
+            R.id.menu_item_2 -> App.instance.fragmentManager.changeFragment(TestFragment2::class.java, TestFragment2::class.java.getSimpleName())
+            R.id.menu_item_3 -> App.instance.fragmentManager.changeFragment(TestFragment3::class.java, TestFragment3::class.java.getSimpleName())
+            R.id.menu_item_4 -> App.instance.fragmentManager.changeFragment(TestvmFragment::class.java, TestvmFragment::class.java.getSimpleName())
+            R.id.menu_item_5 -> App.instance.fragmentManager.changeFragment(TestDaggerFragment::class.java, TestDaggerFragment::class.java.getSimpleName())
+            R.id.menu_item_preferences -> App.instance.fragmentManager.changeFragment(SettingsFragment::class.java, SettingsFragment::class.java.getSimpleName())
         }
 
         val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout

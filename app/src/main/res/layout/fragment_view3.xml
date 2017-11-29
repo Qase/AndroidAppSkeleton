@@ -8,20 +8,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:paddingTop="32dp"
         android:text="@string/title_fragment_3"
         android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+    <TextView
+        android:layout_below="@id/textView3"
+        android:id="@+id/textViewDescrioption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/description_nested"
+        android:padding="16dp"
+        />
 
     <FrameLayout
         android:id="@+id/fragment_container_test"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_below="@+id/textView3"></FrameLayout>
+        android:layout_below="@+id/textViewDescrioption" />
 
     <FrameLayout
         android:id="@+id/fragment_container_test2"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_below="@+id/fragment_container_test"></FrameLayout>
+        android:layout_below="@+id/fragment_container_test" />
 
 </RelativeLayout>
