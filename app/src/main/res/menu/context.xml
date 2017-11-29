@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_context_1"
+        android:title="@string/menu_context_item_1"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_context_2"
+        android:title="@string/menu_context_item_2"
+        app:showAsAction="never">
+
+        <menu>
+            <item
+                android:id="@+id/action_context_2_1"
+                android:title="@string/menu_context_item_2_1"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_context_2_2"
+                android:title="@string/menu_context_item_2_2"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

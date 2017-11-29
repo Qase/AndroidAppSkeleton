@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.CheckBoxPreference
+        android:defaultValue="true"
+        android:key="test_bool"
+        android:summary="Testing bool pref summary"
+        android:title="Testing bool preference" />
+
+    <android.support.v7.preference.EditTextPreference
+        android:defaultValue=""
+        android:key="test_string"
+        android:summary="Testing string pref summary"
+        android:title="Testing string preference" />
+
+    <android.support.v7.preference.ListPreference
+        android:defaultValue="Entry 2"
+        android:dialogTitle="Choose preference 2"
+        android:entries="@array/pref_test2_entries"
+        android:entryValues="@array/pref_test2_entries"
+        android:key="pref_test2"
+        android:title="Preference 2" />
+
+</android.support.v7.preference.PreferenceScreen>

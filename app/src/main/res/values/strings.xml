@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">AppSkeletonDemo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="menu_item_1">Menu Item 1</string>
+    <string name="menu_item_2">Menu Item 2</string>
+    <string name="menu_item_2_1">Submenu Item 1</string>
+    <string name="menu_item_2_2">Submenu Item 2</string>
+    <string name="menu_item_3">Menu Item 3</string>
+    <string name="menu_item_4">Test MVVM</string>
+    <string name="menu_item_preferences">Preferences</string>
+
+    <string name="menu_context_item_1">Context Item 1</string>
+    <string name="menu_context_item_2">Context Item 2</string>
+    <string name="menu_context_item_2_1">Subcontext Item 1</string>
+    <string name="menu_context_item_2_2">Subcontext Item 2</string>
+
+    <string name="button_fragment_1">Show fragment 1</string>
+    <string name="button_fragment_2">Show fragment 2</string>
+    <string name="button_fragment_3">Show fragment 3</string>
+
+    <string name="title_fragment_1">Test Fragment 1</string>
+    <string name="title_fragment_2">Test Fragment 2</string>
+    <string name="title_fragment_3">Test Fragment 3</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+</resources>
