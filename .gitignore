@@ -8,7 +8,5 @@
 app/libs/
 appskeleton/libs/
 libs/
-gradle/wrapper/gradle-wrapper.jar
 .idea/
 gradlew.bat
-gradlew
