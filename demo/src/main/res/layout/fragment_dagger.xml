@@ -9,8 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:paddingTop="32dp"
-        android:text="@string/title_fragment_dagger"
-        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+        android:text="@string/title_fragment_dagger" />
 
     <TextView
         android:id="@+id/textViewDescrioption"

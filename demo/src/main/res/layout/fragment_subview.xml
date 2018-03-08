@@ -9,8 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="Subfragment"
-        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+        android:text="Subfragment"/>
 
     <Button
         android:id="@+id/bSetStateSub"
