@@ -7,7 +7,6 @@
 //import android.view.View
 //import android.widget.TextView
 //import com.qase.android.appskeleton.R
-//import cz.intens.msd.R
 //
 ///**
 // * Created by lubos on 20.11.16.

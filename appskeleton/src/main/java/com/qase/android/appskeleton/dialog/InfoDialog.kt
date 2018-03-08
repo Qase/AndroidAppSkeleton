@@ -3,9 +3,6 @@
 //import android.os.Bundle
 //import android.support.v4.app.Fragment
 //import android.view.View
-//import cz.intens.msd.main.forms.FormBuilder
-//import cz.intens.msd.main.forms.TextFormElement
-//import kotlinx.android.synthetic.main.fragment_dialog_general.view.*
 //
 //class InfoDialog : BaseDialog() {
 //

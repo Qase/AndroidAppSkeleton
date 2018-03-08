@@ -10,11 +10,7 @@
 //import android.view.LayoutInflater
 //import android.view.View
 //import android.view.ViewGroup
-//import android.widget.LinearLayout
 //import com.qase.android.appskeleton.R
-//import cz.intens.msd.R
-//import cz.intens.utils.Utils
-//import kotlinx.android.synthetic.main.fragment_dialog_general.view.*
 //
 //abstract class BaseDialog : DialogFragment() {
 //
