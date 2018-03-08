@@ -1,8 +1,6 @@
 *.iml
 .gradle
 /local.properties
-/.idea/workspace.xml
-/.idea/libraries
 .DS_Store
 /build
 /captures
@@ -10,7 +8,7 @@
 app/libs/
 appskeleton/libs/
 libs/
-gradle/wrapper/
+gradle/wrapper/gradle-wrapper.jar
 .idea/
 gradlew.bat
 gradlew
