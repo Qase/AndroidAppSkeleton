@@ -3,12 +3,13 @@ package com.qase.android.appskeleton.preference
 import android.preference.PreferenceManager
 import android.util.Log
 import com.qase.android.appskeleton.BaseApp
+import java.util.TreeMap
 
 /**
  * Base class for settings migration
  */
 open class BasePreferencesMigration {
-    var migrationMap: MutableMap<Int, Runnable>? = null
+    val migrationMap: MutableMap<Int, Runnable> by lazy { TreeMap<Int, Runnable>() }
 
     /**
      * Entry point method for start settings migration
@@ -18,7 +19,7 @@ open class BasePreferencesMigration {
         try {
             val fromIndex = if (fromVersion <= 0) 0 else fromVersion
 
-            for ((key, value) in migrationMap!!) {
+            for ((key, value) in migrationMap) {
                 if (key >= fromIndex) {
                     Log.d("BasePreferenceMigration", "RUNNING MIGRATION v. " + key)
                     value.run()
