@@ -6,13 +6,13 @@ import com.qase.android.appskeleton.BaseApp
 
 abstract class BasePreferenceFragment<BundleType : BaseBundle> : PreferenceFragmentCompat(), IFragment<BundleType> {
 
-    var fragmentData: BundleType? = null
+    override var data: BundleType? = null
 
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
 
         //Save the fragment's state here
-        outState?.putSerializable("fragmentData", fragmentData)
+        outState?.putSerializable("fragmentData", data)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -22,10 +22,14 @@ abstract class BasePreferenceFragment<BundleType : BaseBundle> : PreferenceFragm
             //Restore the fragment's state here
 
             //if mData is not null then it was set by FragmentManager (e.g. in changeFragment(..., extras, ...) method) and we do not want to overwrite it
-            if (fragmentData == null) {
-                fragmentData = savedInstanceState.getSerializable(BUNDLE_KEY) as BundleType?
+            if (data == null) {
+                data = savedInstanceState.getSerializable(BUNDLE_KEY) as BundleType?
             }
         }
+    }
+
+    override fun onBackPressed(): Boolean {
+        return false
     }
 
     override fun onResume() {
