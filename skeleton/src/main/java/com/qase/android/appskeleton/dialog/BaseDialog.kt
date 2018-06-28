@@ -45,7 +45,7 @@
 //            .create()
 //    }
 //
-//    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+//    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 //        dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 //        return super.onCreateView(inflater, container, savedInstanceState)
 //    }

@@ -13,12 +13,12 @@ class TestFragment2 : BaseFragment<BaseBundle>() {
         mActualFragment = this.javaClass.simpleName
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
 
         // Inflate the layout for this fragment
-        return inflater?.inflate(R.layout.fragment_view2, container, false)
+        return inflater.inflate(R.layout.fragment_view2, container, false)
     }
 
     override fun onBackPressed(): Boolean {

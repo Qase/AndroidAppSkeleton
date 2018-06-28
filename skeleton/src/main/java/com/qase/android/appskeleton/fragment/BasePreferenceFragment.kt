@@ -8,11 +8,11 @@ abstract class BasePreferenceFragment<BundleType : BaseBundle> : PreferenceFragm
 
     override var data: BundleType? = null
 
-    override fun onSaveInstanceState(outState: Bundle?) {
+    override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
 
         //Save the fragment's state here
-        outState?.putSerializable("fragmentData", data)
+        outState.putSerializable("fragmentData", data)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

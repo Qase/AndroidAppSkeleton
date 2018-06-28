@@ -14,16 +14,16 @@ class TestFragment : BaseFragment<TestFragmentBundle>() {
         mActualFragment = this.javaClass.simpleName
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
 
-        val view = inflater?.inflate(R.layout.fragment_view1, container, false)
+        val view = inflater.inflate(R.layout.fragment_view1, container, false)
 
         return view
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bSetState.setOnClickListener(bSetStateOnClickListener())
     }
