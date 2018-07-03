@@ -8,7 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import com.qase.android.appskeleton.activity.BaseActivityViewHelper
-import com.qase.android.appskeleton.activity.BaseMainActivity
+import com.qase.android.appskeleton.activity.BaseDrawerMainActivity
 import com.qase.android.appskeleton.activity.DefaultDrawerActivityViewHelper
 import com.qase.android.appskeletondemo.main.preference.SettingsFragment
 import com.qase.android.appskeletondemo.main.test.TestFragment
@@ -17,7 +17,7 @@ import com.qase.android.appskeletondemo.main.test.TestFragment3
 import com.qase.android.appskeletondemo.main.testviewmodel.TestDaggerFragment
 import com.qase.android.appskeletondemo.main.testviewmodel.TestvmFragment
 
-class MainActivity : BaseMainActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : BaseDrawerMainActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override val activityViewHelper: BaseActivityViewHelper = DefaultDrawerActivityViewHelper(this, R.menu.main, android.R.drawable.sym_def_app_icon, "Skeleton Demo", "example@quanti.cz")
 
