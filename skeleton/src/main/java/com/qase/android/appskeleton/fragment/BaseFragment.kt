@@ -22,11 +22,11 @@ abstract class BaseFragment<BundleType : BaseBundle> : Fragment(), IFragment<Bun
     /**
      * Save/Restore data
      */
-    override fun onSaveInstanceState(outState: Bundle?) {
+    override fun onSaveInstanceState(outState: Bundle) {
         if (showLifecycleLog) Log.d(mActualFragment, "onSaveInstanceState")
 
         //Save the fragment's state here
-        outState?.putSerializable(BUNDLE_KEY, data)
+        outState.putSerializable(BUNDLE_KEY, data)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -65,12 +65,12 @@ abstract class BaseFragment<BundleType : BaseBundle> : Fragment(), IFragment<Bun
         super.onCreateOptionsMenu(menu, inflater)
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         if (showLifecycleLog) Log.d(mActualFragment, "onCreateView")
         return super.onCreateView(inflater, container, savedInstanceState)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if (showLifecycleLog) Log.d(mActualFragment, "onViewCreated")
         super.onViewCreated(view, savedInstanceState)
 

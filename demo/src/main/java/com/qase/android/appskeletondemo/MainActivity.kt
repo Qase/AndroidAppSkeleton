@@ -4,25 +4,25 @@ import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
-import android.support.v7.app.ActionBarDrawerToggle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import com.qase.android.appskeleton.BaseMainActivity
+import com.qase.android.appskeleton.activity.BaseActivityViewHelper
+import com.qase.android.appskeleton.activity.BaseMainActivity
+import com.qase.android.appskeleton.activity.DefaultDrawerActivityViewHelper
 import com.qase.android.appskeletondemo.main.preference.SettingsFragment
 import com.qase.android.appskeletondemo.main.test.TestFragment
 import com.qase.android.appskeletondemo.main.test.TestFragment2
 import com.qase.android.appskeletondemo.main.test.TestFragment3
 import com.qase.android.appskeletondemo.main.testviewmodel.TestDaggerFragment
 import com.qase.android.appskeletondemo.main.testviewmodel.TestvmFragment
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.main_layout.*
 
 class MainActivity : BaseMainActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    override val activityViewHelper: BaseActivityViewHelper = DefaultDrawerActivityViewHelper(this, R.menu.main, android.R.drawable.sym_def_app_icon, "Skeleton Demo", "example@quanti.cz")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         App.instance.activity = this
 
         // Set initial fragment
@@ -30,15 +30,7 @@ class MainActivity : BaseMainActivity(), NavigationView.OnNavigationItemSelected
             App.instance.fragmentManager.changeFragment(TestFragment::class.java, TestFragment::class.java.getSimpleName())
         }
 
-        // Main layout setup
-        setSupportActionBar(toolbar)
 
-        val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
-        val toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawer.addDrawerListener(toggle)
-        toggle.syncState()
-
-        nav_view.setNavigationItemSelectedListener(this)
     }
 
     /**
