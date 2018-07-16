@@ -10,12 +10,15 @@ import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import com.qase.android.appskeleton.BaseApp
+import io.reactivex.subjects.BehaviorSubject
+import io.reactivex.subjects.Subject
 
 abstract class BaseFragment<BundleType : BaseBundle> : Fragment(), IFragment<BundleType> {
 
     override var data: BundleType? = null
     protected var mActualFragment = "BaseFragment"
     protected var showLifecycleLog = true
+    override var fragmentStateSubject: Subject<FragmentState> = BehaviorSubject.create()
 
     override fun onBackPressed(): Boolean = false
 

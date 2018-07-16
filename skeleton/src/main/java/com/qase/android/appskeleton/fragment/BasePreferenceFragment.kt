@@ -3,10 +3,14 @@ package com.qase.android.appskeleton.fragment
 import android.os.Bundle
 import android.support.v7.preference.PreferenceFragmentCompat
 import com.qase.android.appskeleton.BaseApp
+import io.reactivex.subjects.BehaviorSubject
+import io.reactivex.subjects.Subject
 
 abstract class BasePreferenceFragment<BundleType : BaseBundle> : PreferenceFragmentCompat(), IFragment<BundleType> {
 
     override var data: BundleType? = null
+
+    override var fragmentStateSubject: Subject<FragmentState> = BehaviorSubject.create()
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)

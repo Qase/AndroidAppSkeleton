@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.qase.android.appskeleton.fragment.BaseFragment
+import com.qase.android.appskeleton.fragment.FragmentState
 import com.qase.android.appskeletondemo.R
 import kotlinx.android.synthetic.main.fragment_subview.*
 
@@ -16,6 +17,7 @@ class TestSubfragment : BaseFragment<TestFragmentBundle>() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+        fragmentStateSubject.onNext(FragmentState.STARTING)
         super.onCreateView(inflater, container, savedInstanceState)
 
         // Inflate the layout for this fragment
@@ -33,6 +35,8 @@ class TestSubfragment : BaseFragment<TestFragmentBundle>() {
 
     private fun bSetStateSubOnClickListener(): View.OnClickListener? {
         return View.OnClickListener {
+            fragmentStateSubject.onNext(FragmentState.READY)
+
             if (data == null) {
                 data = TestFragmentBundle()
                 data?.testVar = 0
@@ -51,6 +55,11 @@ class TestSubfragment : BaseFragment<TestFragmentBundle>() {
         }
 
         super.onResume()
+    }
+
+    override fun onDestroy() {
+        fragmentStateSubject.onNext(FragmentState.DESTROYED)
+        super.onDestroy()
     }
 
     override fun onBackPressed(): Boolean {
