@@ -30,8 +30,6 @@ class MainActivity : BaseMainActivity(), NavigationView.OnNavigationItemSelected
         if (savedInstanceState == null) {
             App.instance.fragmentManager.changeFragment(TestFragment::class.java, TestFragment::class.java.getSimpleName())
         }
-
-
     }
 
     /**
