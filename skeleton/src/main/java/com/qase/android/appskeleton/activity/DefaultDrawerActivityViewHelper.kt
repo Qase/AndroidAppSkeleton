@@ -42,12 +42,6 @@ open class DefaultDrawerActivityViewHelper(listener: NavigationView.OnNavigation
         this.headerTextSecondary = headerTextSecondary
     }
 
-    @StringRes
-    override val openDrawerContentDescRes: Int = R.string.navigation_drawer_open
-
-    @StringRes
-    override val closeDrawerContentDescRes: Int = R.string.navigation_drawer_open
-
     @LayoutRes
     override val drawerHeaderLayoutRes: Int? = R.layout.main_nav_header
 
