@@ -1,36 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:paddingTop="32dp"
+        android:paddingTop="16dp"
         android:text="@string/title_fragment_3" />
 
     <TextView
-        android:layout_below="@id/textView3"
         android:id="@+id/textViewDescrioption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
         android:layout_centerHorizontal="true"
-        android:text="@string/description_nested"
-        android:padding="16dp"
-        />
+        android:text="@string/description_nested" />
+
+    <TextView
+        android:id="@+id/label1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDescrioption"
+        android:text="@string/label_nested_1" />
+
+    <TextView
+        android:id="@+id/label2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label1"
+        android:text="@string/label_nested_2" />
+
+    <TextView
+        android:id="@+id/state1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDescrioption"
+        android:layout_toEndOf="@id/label1"
+        android:layout_toRightOf="@id/label1" />
+
+    <TextView
+        android:id="@+id/state2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label1"
+        android:layout_toEndOf="@id/label1"
+        android:layout_toRightOf="@id/label1" />
 
     <FrameLayout
         android:id="@+id/fragment_container_test"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_below="@+id/textViewDescrioption" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/state2"
+        android:paddingTop="32dp" />
 
     <FrameLayout
         android:id="@+id/fragment_container_test2"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_below="@+id/fragment_container_test" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_container_test"
+        android:paddingTop="32dp" />
 
 </RelativeLayout>
