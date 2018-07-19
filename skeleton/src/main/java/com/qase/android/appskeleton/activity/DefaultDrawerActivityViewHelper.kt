@@ -10,6 +10,10 @@ import android.widget.TextView
 import com.qase.android.appskeleton.R
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * Class for creating activity view with toolbar and navigation drawer
+ * It has multiple constructors which allow to customize the drawer
+ */
 open class DefaultDrawerActivityViewHelper(listener: NavigationView.OnNavigationItemSelectedListener) : DrawerActivityViewHelper(listener) {
 
     constructor(listener: NavigationView.OnNavigationItemSelectedListener, @MenuRes menuRes: Int) : this(listener) {

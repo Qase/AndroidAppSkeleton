@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.qase.android.appskeleton.BaseApp
 
+/**
+ * Base activity which should be used as parent for app's main activity
+ * To customize it's view set activityViewHelper
+ */
 abstract class BaseMainActivity : AppCompatActivity() {
 
     open val activityViewHelper: BaseActivityViewHelper = DefaultDrawerActivityViewHelper(NavigationView.OnNavigationItemSelectedListener {false })

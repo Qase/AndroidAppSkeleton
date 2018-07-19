@@ -83,7 +83,10 @@ class MainActivity : BaseMainActivity(), NavigationView.OnNavigationItemSelected
             R.id.menu_item_3 -> App.instance.fragmentManager.changeFragment(TestFragment3::class.java, TestFragment3::class.java.getSimpleName())
             R.id.menu_item_4 -> App.instance.fragmentManager.changeFragment(TestvmFragment::class.java, TestvmFragment::class.java.getSimpleName())
             R.id.menu_item_5 -> App.instance.fragmentManager.changeFragment(TestDaggerFragment::class.java, TestDaggerFragment::class.java.getSimpleName())
-            R.id.menu_item_6 -> { startActivity(Intent(this, CustomViewActivity::class.java)); finish() }
+            R.id.menu_item_6 -> {
+                // do not use more than activity in one app (this is just for example purposes)
+                startActivity(Intent(this, CustomViewActivity::class.java)); finish()
+            }
             R.id.menu_item_preferences -> App.instance.fragmentManager.changeFragment(SettingsFragment::class.java, SettingsFragment::class.java.getSimpleName())
         }
 

@@ -8,6 +8,9 @@ import com.qase.android.appskeleton.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_layout.*
 
+/**
+ * Abstract class for creating activity with toolbar and navigation drawer
+ */
 abstract class DrawerActivityViewHelper(private val listener: NavigationView.OnNavigationItemSelectedListener) : BaseActivityViewHelper() {
 
     abstract val openDrawerContentDescRes: Int
