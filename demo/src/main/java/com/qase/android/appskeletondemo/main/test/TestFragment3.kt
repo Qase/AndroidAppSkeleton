@@ -39,7 +39,7 @@ class TestFragment3 : BaseFragment<BaseBundle>() {
             state1.text = it.value
         }
         compositeDisposable.add(disposable1)
-        val disposable2 = fragment2.fragmentStateSubject.subscribe {
+        val disposable2 = fragment2.fragmentLifecycleSubject.subscribe {
             state2.text = it.value
         }
         compositeDisposable.add(disposable2)

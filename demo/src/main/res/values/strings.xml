@@ -29,9 +29,9 @@
     <string name="title_fragment_dagger">Test Fragment Dagger</string>
     <string name="ok">Ok</string>
     <string name="cancel">Cancel</string>
-    <string name="label_nested_1">State of nested fragment 1:</string>
-    <string name="label_nested_2">State of nested fragment 2:</string>
-    <string name="description_nested">This fragment shows how we can nest fragments using FragmentManager and monitor their state</string>
+    <string name="label_nested_1">Custom state of nested fragment 1:</string>
+    <string name="label_nested_2">Lifecycle state of nested fragment 2:</string>
+    <string name="description_nested">This fragment shows how we can nest fragments using FragmentManager and monitor their custom or lifecycle state</string>
     <string name="description_simple">This fragment demonstrates how we can use FragmentManager to show single simple fragment</string>
     <string name="description_using_data">In this fragment we use data bundle provided in BaseFragment to keep fragment state</string>
     <string name="description_using_viewmodel">This fragments shows how to use architecture components viewmodel</string>

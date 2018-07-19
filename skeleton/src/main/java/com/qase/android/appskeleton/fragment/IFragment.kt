@@ -9,4 +9,6 @@ interface IFragment<BundleType : BaseBundle> {
     fun onBackPressed(): Boolean
 
     var fragmentStateSubject: Subject<FragmentState>
+
+    var fragmentLifecycleSubject: Subject<FragmentLifecycleState>
 }
