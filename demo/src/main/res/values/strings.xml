@@ -11,6 +11,7 @@
     <string name="menu_item_3">Menu Item 3</string>
     <string name="menu_item_4">Test MVVM</string>
     <string name="menu_item_5">Test Dagger</string>
+    <string name="menu_item_6">Custom View Activity</string>
     <string name="menu_item_preferences">Preferences</string>
 
     <string name="menu_context_item_1">Context Item 1</string>
