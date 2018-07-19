@@ -8,10 +8,14 @@ import com.qase.android.appskeleton.BaseApp
 
 abstract class BaseMainActivity : AppCompatActivity() {
 
+    open val activityViewHelper: BaseActivityViewHelper = DefaultDrawerActivityViewHelper(NavigationView.OnNavigationItemSelectedListener {false })
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         BaseApp.instance.baseActivity = this
         BaseApp.instance.fragmentManager.androidFragmentManager = supportFragmentManager
+        setContentView(activityViewHelper.mainLayoutRes)
+        activityViewHelper.onCreate(this)
     }
 
     override fun onBackPressed() {
