@@ -245,8 +245,8 @@ class BaseFragmentManager {
     /**
      * @return Fragment to IFragment casted instance
      */
-    val currentIFragment: IFragment<*>
-        get() = currentFragment as IFragment<*>
+    val currentIFragment: IFragment<*>?
+        get() = currentFragment as IFragment<*>?
 
     /**
      * Get current fragment

@@ -24,7 +24,7 @@ abstract class BaseMainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         val currentFragment = BaseApp.instance.fragmentManager.currentIFragment
-        if (currentFragment.onBackPressed()) {
+        if (currentFragment?.onBackPressed() == true) {
             Log.d("BaseMainActivity", "BackPressed Handled by Fragment: " + currentFragment.javaClass.canonicalName)
         } else if (onHandleBackPressed()) {
             Log.d("BaseMainActivity", "BackPressed Handled by Child Activity")
