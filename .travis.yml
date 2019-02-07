@@ -7,3 +7,6 @@ android:
   - android-sdk-preview-license-.+
   - android-sdk-license-.+
   - google-gdk-license-.+
+notifications:
+  slack:
+    secure: LrR5xsOcgkgBMCGGnMvvqscdc+Zn/GtocmQlUnzhYweKeYnUm/+HoXQ3U1eTkAezs2Nv/wuB46mwLboYiCWijHmosRN2EJWnb25W794lvohoQ5Q384OIjxbsUMtx4CyZ06sAGiGuNAJ6QZof3KjhMrrj9DVJ5TmO4oB8xS0JIblkW3w0bDsOMHbx185eV6tXE0WDS2O9zN2jal/BvayIdyJHb83ZgR0C6KzunEStfM6DQFVvU6SRiU7QvcAjR6CK2wZP41YRX+6VKVZvr7sQS3Lel2tBYbsBrEXasfEZMm9L1uTyzze5rsWsK9IjUh/q4TlDxH+icQXCxVGpx96ibCwggn6neCpf8uuYYMLxcskm+5adBsMx6n9W+6cN0+eLDMqDV+vQey7EW45O1Meljbn5POzhux1NuPxB+in3d00GIuojdg4Yon/6ApnpbVKu3nsyjlb4X8lqDkI9GL4zKBRVzurBOfuXK2Z0FHd5epn6L+5VT+8jrzvZarww1yxkKoTDspGc0tUdeyHMs3U+3F0A6MYax7+ttM0xx6y3+zmWQ0BEHxVC/M06ZaYC3b1vRur/jgOfgdwPzvCPu/X0jE2NE21oBa0iluFcHBSYLGT797/v/e2B0cSuN5x0Foksm6mhxd4AREuOcu6dQux25bTCIfmEWpIx4pxLWCb9njs=
