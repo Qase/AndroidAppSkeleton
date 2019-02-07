@@ -8,6 +8,48 @@
 
 # Android App Skeleton
 
+Android application skeleton for better fragment and navigation handling.
+
+Currently used in all Quanti anroid projects, but there is huge update coming since google relased their own library with similiar capabilities. Further development will be discused.
+
+[Google navigation architecture component](https://developer.android.com/topic/libraries/architecture/navigation/)
+
+## Features
+* Written in kotlin
+* Usable in every JVM language including Java/Kotlin/Scala ...
+* Very easy to use
+* Better Fragment stack handling
+* Descrptive in-code documentation of classes and functions
+*
+* Co jeste to dela?
+* 
+* Dagger integration on the way
+* Demo app with basic usage is ready to build
+
+## Installation
+
+Click [HERE](https://jitpack.io/#Qase/AndroidAppSkeleton).
+
+## Code example
+
+Usage is simple
+
+1) Inherit BaseMainActivity with your MainActivity
+```kotlin
+class MainActivity : BaseMainActivity() {
+    ...
+}
+```
+
+2) Inherit all Fragments with BaseFragment and specify bundle
+```kotlin
+class TestFragment : BaseFragment<TestFragmentBundle>() {
+    ...
+}
+```
+
+3) More can be explored in demo app - PreferenceFragment, DaggerBaseApp, BaseViewModelFragment and more
+
 
 ## License
 [MIT](https://github.com/nishanths/license/blob/master/LICENSE)
