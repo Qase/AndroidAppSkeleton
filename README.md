@@ -20,9 +20,6 @@ Currently used in all Quanti anroid projects, but there is huge update coming si
 * Very easy to use
 * Better Fragment stack handling
 * Descrptive in-code documentation of classes and functions
-*
-* Co jeste to dela?
-* 
 * Dagger integration on the way
 * Demo app with basic usage is ready to build
 
