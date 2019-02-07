@@ -10,7 +10,7 @@
 
 Android application skeleton for better fragment and navigation handling.
 
-Currently used in all Quanti anroid projects, but there is huge update coming since google relased their own library with similiar capabilities. Further development will be discused.
+Currently used in all Quanti android projects. There might be a huge update coming since google released their own library with similar capabilities. This library is either going to integrate this library or discontinue its development.
 
 [Google navigation architecture component](https://developer.android.com/topic/libraries/architecture/navigation/)
 
