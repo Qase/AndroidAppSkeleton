@@ -1,10 +1,8 @@
-package com.qase.android.appskeletondemo.main.testviewmodel
+package com.qase.android.appskeletondemo.main.testdagger
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 import com.qase.android.appskeleton.fragment.BaseBundle
 import com.qase.android.appskeleton.fragment.InjectedBaseViewModel
-import com.qase.android.appskeletondemo.main.testdagger.AppComponent
-import com.qase.android.appskeletondemo.main.testdagger.TestManager
 import javax.inject.Inject
 
 class TestDaggerViewModel : InjectedBaseViewModel<BaseBundle, AppComponent>() {

@@ -1,12 +1,13 @@
 package com.qase.android.appskeleton.activity
 
-import android.support.annotation.LayoutRes
-import android.support.annotation.MenuRes
-import android.support.annotation.StringRes
-import android.support.design.widget.NavigationView
-import android.support.v4.widget.DrawerLayout
-import android.support.v7.app.ActionBarDrawerToggle
+
 import android.view.View
+import androidx.annotation.LayoutRes
+import androidx.annotation.MenuRes
+import androidx.annotation.StringRes
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 import com.qase.android.appskeleton.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_layout.*

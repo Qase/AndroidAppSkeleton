@@ -2,12 +2,12 @@ package com.qase.android.appskeletondemo
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v4.view.GravityCompat
-import android.support.v4.widget.DrawerLayout
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 import com.qase.android.appskeleton.activity.BaseActivityViewHelper
 import com.qase.android.appskeleton.activity.BaseMainActivity
 import com.qase.android.appskeleton.activity.DefaultDrawerActivityViewHelper
@@ -15,7 +15,7 @@ import com.qase.android.appskeletondemo.main.preference.SettingsFragment
 import com.qase.android.appskeletondemo.main.test.TestFragment
 import com.qase.android.appskeletondemo.main.test.TestFragment2
 import com.qase.android.appskeletondemo.main.test.TestFragment3
-import com.qase.android.appskeletondemo.main.testviewmodel.TestDaggerFragment
+import com.qase.android.appskeletondemo.main.testdagger.TestDaggerFragment
 import com.qase.android.appskeletondemo.main.testviewmodel.TestvmFragment
 
 class MainActivity : BaseMainActivity(), NavigationView.OnNavigationItemSelectedListener {

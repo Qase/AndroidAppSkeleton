@@ -2,13 +2,13 @@ package com.qase.android.appskeleton.fragment
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.qase.android.appskeleton.BaseApp
 import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.Subject
@@ -64,7 +64,7 @@ abstract class BaseFragment<BundleType : BaseBundle> : Fragment(), IFragment<Bun
         super.onDestroy()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         if (showLifecycleLog) Log.d(mActualFragment, "onCreateOptionsMenu")
         super.onCreateOptionsMenu(menu, inflater)
     }
@@ -94,7 +94,7 @@ abstract class BaseFragment<BundleType : BaseBundle> : Fragment(), IFragment<Bun
         super.onDestroyView()
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         if (showLifecycleLog) Log.d(mActualFragment, "onAttach")
         super.onAttach(context)
     }

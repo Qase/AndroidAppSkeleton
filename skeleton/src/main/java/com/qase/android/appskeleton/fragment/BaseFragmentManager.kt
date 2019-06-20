@@ -1,8 +1,8 @@
 package com.qase.android.appskeleton.fragment
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
 import android.util.Log
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.qase.android.appskeleton.BaseApp
 import com.qase.android.appskeleton.R
 import java.util.ArrayList
@@ -19,7 +19,8 @@ class BaseFragmentManager {
             if (androidFragmentManager == null) {
                 androidFragmentManager = BaseApp.instance.baseActivity?.supportFragmentManager
             }
-            return androidFragmentManager ?: throw RuntimeException("Could not get Fragment Manager")
+            return androidFragmentManager
+                    ?: throw RuntimeException("Could not get Fragment Manager")
         }
 
     /**
@@ -44,6 +45,7 @@ class BaseFragmentManager {
 
         }
     }
+
 
     @JvmOverloads
     fun <FragmentType : IFragment<BundleType>, BundleType : BaseBundle> changeFragment(fragmentClassFullName: String, key: String, extras: BundleType? = null, rFragContainer: Int = MAIN_CONTAINER_ID, frManager: FragmentManager? = null, clearBackstack: Boolean = false): FragmentType {
@@ -90,7 +92,7 @@ class BaseFragmentManager {
             val transaction = fm.beginTransaction()
 
             // Replace whatever is in the fragment_container view with this fragment
-            transaction.replace(rFragContainer, fragment as Fragment?, key)
+            transaction.replace(rFragContainer, fragment as Fragment, key)
 
             // Add the transaction to the back stack so the user can navigate back
             if (addToBackStack) {
@@ -132,8 +134,10 @@ class BaseFragmentManager {
         val transaction = fm.beginTransaction()
         val fragment = fm.findFragmentByTag(key)
 
-        transaction.detach(fragment)
-        transaction.commit()
+        if (fragment != null) {
+            transaction.detach(fragment)
+            transaction.commit()
+        }
     }
 
     /**
@@ -146,7 +150,7 @@ class BaseFragmentManager {
      * *
      * @return Fragment instance
     </FragmentType> */
-    fun <FragmentType : IFragment<BundleType>, BundleType : BaseBundle> getFragment(fragmentClass: Class<FragmentType>, key: String, fm: FragmentManager, extras: BundleType?): FragmentType? {
+    fun <FragmentType : IFragment<BundleType>, BundleType : BaseBundle> getFragment(fragmentClass: Class<FragmentType>, key: String, fm: FragmentManager, extras: BundleType?): FragmentType {
         try {
             // Check if fragment exists
             val existFragment = fm.findFragmentByTag(key)
@@ -172,8 +176,7 @@ class BaseFragmentManager {
         } catch (ex: Exception) {
             Log.e(LOG_TAG, "Get fragment failed!")
             ex.printStackTrace()
-
-            return null
+            throw  ex
         }
 
     }
@@ -194,10 +197,12 @@ class BaseFragmentManager {
         val name = fm.getBackStackEntryAt(index).name
         val fragment = fm.findFragmentByTag(name)
 
-        val trans = fm.beginTransaction()
-        trans.remove(fragment)
-        trans.commit()
-        fm.popBackStack()
+        if (fragment != null) {
+            val trans = fm.beginTransaction()
+            trans.remove(fragment)
+            trans.commit()
+            fm.popBackStack()
+        }
     }
 
     /**
@@ -270,6 +275,7 @@ class BaseFragmentManager {
 
             if (backStackCount > 0) {
                 fragmentTag = fragmentManager.getBackStackEntryAt(backStackCount - 1).name
+                        ?: throw RuntimeException("No name for fragment")
             }
 
             return fragmentTag

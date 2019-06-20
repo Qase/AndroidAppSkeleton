@@ -1,6 +1,7 @@
 package com.qase.android.appskeleton.fragment
 
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProviders
+
 
 /**
  * Created by tomas on 22.08.2017.

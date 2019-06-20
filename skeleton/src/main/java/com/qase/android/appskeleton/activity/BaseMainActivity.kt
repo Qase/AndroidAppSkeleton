@@ -1,9 +1,9 @@
 package com.qase.android.appskeleton.activity
 
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.navigation.NavigationView
 import com.qase.android.appskeleton.BaseApp
 
 /**

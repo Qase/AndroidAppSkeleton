@@ -1,10 +1,10 @@
-package com.qase.android.appskeletondemo.main.testviewmodel
+package com.qase.android.appskeletondemo.main.testdagger
 
-import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import com.qase.android.appskeleton.fragment.BaseBundle
 import com.qase.android.appskeleton.fragment.BaseViewModelFragment
 import com.qase.android.appskeletondemo.R

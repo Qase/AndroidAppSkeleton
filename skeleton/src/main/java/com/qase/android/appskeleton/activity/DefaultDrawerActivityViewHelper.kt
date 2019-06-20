@@ -1,12 +1,12 @@
 package com.qase.android.appskeleton.activity
 
-import android.support.annotation.DrawableRes
-import android.support.annotation.LayoutRes
-import android.support.annotation.MenuRes
-import android.support.annotation.StringRes
-import android.support.design.widget.NavigationView
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.DrawableRes
+import androidx.annotation.LayoutRes
+import androidx.annotation.MenuRes
+import androidx.annotation.StringRes
+import com.google.android.material.navigation.NavigationView
 import com.qase.android.appskeleton.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -34,8 +34,8 @@ open class DefaultDrawerActivityViewHelper(listener: NavigationView.OnNavigation
     constructor(listener: NavigationView.OnNavigationItemSelectedListener,
                 @MenuRes menuRes: Int? = null,
                 @DrawableRes headerIconRes: Int? = null,
-                @StringRes headerTextPrimary: String? = null,
-                @StringRes headerTextSecondary: String? = null) : this(listener) {
+                headerTextPrimary: String? = null,
+                headerTextSecondary: String? = null) : this(listener) {
         this.menuRes = menuRes
         this.headerIconRes = headerIconRes
         this.headerTextPrimary = headerTextPrimary

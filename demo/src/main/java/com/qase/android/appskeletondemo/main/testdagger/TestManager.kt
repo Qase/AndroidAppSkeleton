@@ -1,6 +1,6 @@
 package com.qase.android.appskeletondemo.main.testdagger
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
 import java.lang.Thread.sleep
