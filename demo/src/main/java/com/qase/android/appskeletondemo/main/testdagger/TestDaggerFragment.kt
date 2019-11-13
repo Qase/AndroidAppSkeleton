@@ -20,7 +20,7 @@ class TestDaggerFragment : BaseViewModelFragment<BaseBundle, TestDaggerViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.testLiveData.observe(this, Observer {
+        viewModel.testLiveData.observe(viewLifecycleOwner, Observer {
             textData.text = it?.toString()
         })
     }

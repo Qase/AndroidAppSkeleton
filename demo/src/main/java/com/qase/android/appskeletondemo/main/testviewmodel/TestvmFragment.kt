@@ -21,7 +21,7 @@ class TestvmFragment : BaseViewModelFragment<BaseBundle, TestvmViewModel>(Testvm
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getDataButton.setOnClickListener{ viewModel.onGetDataClicked() }
-        viewModel.testLiveData.observe(this, Observer {
+        viewModel.testLiveData.observe(viewLifecycleOwner, Observer {
             textData.text = it?.toString()
         })
     }
