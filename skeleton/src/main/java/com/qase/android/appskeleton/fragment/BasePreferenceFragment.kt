@@ -1,10 +1,10 @@
 package com.qase.android.appskeleton.fragment
 
 import android.os.Bundle
-import android.support.v7.preference.PreferenceFragmentCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.preference.PreferenceFragmentCompat
 import com.qase.android.appskeleton.BaseApp
 import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.Subject

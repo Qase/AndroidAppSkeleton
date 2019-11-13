@@ -1,6 +1,6 @@
 package com.qase.android.appskeletondemo.main.testviewmodel
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 import com.qase.android.appskeleton.fragment.BaseBundle
 import com.qase.android.appskeleton.fragment.BaseViewModel
 import io.reactivex.Observable

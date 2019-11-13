@@ -1,10 +1,10 @@
 package com.qase.android.appskeletondemo.main.testviewmodel
 
-import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import com.qase.android.appskeleton.fragment.BaseBundle
 import com.qase.android.appskeleton.fragment.BaseViewModelFragment
 import com.qase.android.appskeletondemo.R
@@ -21,7 +21,7 @@ class TestvmFragment : BaseViewModelFragment<BaseBundle, TestvmViewModel>(Testvm
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getDataButton.setOnClickListener{ viewModel.onGetDataClicked() }
-        viewModel.testLiveData.observe(this, Observer {
+        viewModel.testLiveData.observe(viewLifecycleOwner, Observer {
             textData.text = it?.toString()
         })
     }
